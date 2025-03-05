@@ -19,9 +19,9 @@ numbers.forEach(number => {
         if ((display.innerText === '0') ||
             (display.innerText.includes('=')) || 
             (display.innerText.includes('ERROR'))) {
-            display.innerText = ' ' + e.srcElement.attributes.value.value
+            display.innerText = e.srcElement.attributes.value.value
         } else {
-            display.innerText += ' ' + e.srcElement.attributes.value.value
+            display.innerText += e.srcElement.attributes.value.value
         }
 
         // Determine whether the number entered is placed in left operand
@@ -36,7 +36,7 @@ numbers.forEach(number => {
 
 addElement.addEventListener('click', () => {
     if(rightValue==='') {
-        display.innerText += '+'
+        display.innerText += '+ '
         operator = add;
         operatorSymbol = '+';
     } else {
